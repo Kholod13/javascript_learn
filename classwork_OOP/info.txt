@@ -1,0 +1,28 @@
+OOP JavaScript
+
+Encapsulation - hidding details of implementation*
+Encapsulation - no direct access to the data only via methods
+Encapsulation - joining data and code for handling given data
+--------
+
+class - template for creating similar objects
+object - entities created by using classes
+
+object - existing in a memory (RAM - Random Access Memory)
+
+object: knows (because of data), can (because of code)
+
+classical OOP Paradigm
+
+access modifiers
+3P Rule: private, public, protected (Java, C++, C#)
+
+constructor - method (function) which using for creating new objects
+
+Inheritance
+Polymorpism
+ ----------------------------
+Encapsulation - Creating classes with properties but using properties only by public methods
+Polymorphism  - possibility to start the same method in different objects with different classes and every method will be make yourself
+Inheritance   - inheritance parent class in different class
+Abstraction   - combine all small funcs to one main for easier managing
