@@ -1,0 +1,40 @@
+html{
+    background: #fff;
+    font-size: 62.5%;
+    font-family: arial;
+    font-weight: bold;
+}
+.title{
+    text-align: center;
+    font-size: 3rem;
+}
+.grid div{
+    text-align: center;
+    background: #0a192f;
+    color: gold;
+    border: 1px solid gold;
+}
+
+div.blue{
+    background: #0081c6;
+}
+div.purple{
+    background: #9e2bdf;
+}
+div.yellow{
+    background: #f4ca48;
+    color: #0a192f;
+    border: 1px solid black;
+}
+div{
+    font-size: 18px;
+}
+.block{
+    display: block;
+    background: red;
+    border: 1px solid black;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+}
