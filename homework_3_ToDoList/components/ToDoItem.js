@@ -1,5 +1,4 @@
-
-class ToDoItem {
+export default class ToDoItem {
     #text;
     #status;
     #startDate;
@@ -7,13 +6,22 @@ class ToDoItem {
 
     constructor(text) {
         this.#text = text;
-        this.#status = "todo";
+        this.#status = false;
         this.#startDate = new Date();
         this.#endDate = null;
     }
 
     complete() {
-        this.#status = "done";
-        this.#endDate = new Date();
+        this.#status = !this.#status;
+        this.#endDate = this.#status ? new Date() : null;
+        return this.#status;
+    }
+    // ToDoItem.js
+    getStatus() {
+        return this.#status;
+    }
+
+    getText() {
+        return this.#text;
     }
 }
