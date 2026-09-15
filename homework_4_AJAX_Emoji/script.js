@@ -1,6 +1,6 @@
 (function() {
 
-    const API_KEY = "-"; //API Ninjas (Emoji API) KEY
+    const API_KEY = "ZPtmBReSfM4erqohORs4HWuFxd6K7w6drRokA3Qv"; //API Ninjas (Emoji API) KEY
 
     //work with elements DOM
     let canvas = document.getElementById('emoji');
@@ -68,5 +68,34 @@
             console.log(`Error in ajax fetch: ${e}`);
         }
     }
+
+    async function getGoldPrice(){
+        try{
+            const response = await fetch(`https://api.api-ninjas.com/v1/goldprice`, {
+                method: 'GET',
+                headers: {
+                    'X-Api-Key': API_KEY,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error(`Server Error: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log(data.price);
+
+            const goldPrice = document.getElementById('gold');
+
+            goldPrice.textContent = data.price;
+
+        }
+        catch(e) {
+            console.log(`Error in ajax fetch: ${e}`);
+        }
+    }
+
+    getGoldPrice();
 
 })();
